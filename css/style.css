@@ -1,0 +1,187 @@
+:root {
+  --primary: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  --VeryLightGrayishBlue: hsl(240, 78%, 98%);
+  --LightGrayishBlue: hsl(234, 14%, 74%);
+  --GrayishBlue: hsl(233, 13%, 49%);
+  --DarkGrayishBlue: hsl(232, 13%, 33%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  background-image: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+  background-position: right top, left bottom;
+  background-size: 500px 730px, 500px 400px;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.heading {
+  font-size: 2rem;
+  text-align: center;
+  margin: 50px 0;
+  color: var(--GrayishBlue);
+}
+
+/* **************************Toggle Design Start *******************************/
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin: 50px 0;
+  color: var(--GrayishBlue);
+}
+
+.toggle .text {
+  margin: 0 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--primary);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: hsl(236, 72%, 79%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--primary);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* **************************Toggle Design End *******************************/
+
+.plan-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plan-section .plan {
+  width: 300px;
+  height: 370px;
+  text-align: center;
+  padding: 30px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 1.6rem var(--LightGrayishBlue);
+}
+
+.plan-section .plan .plan-price {
+  font-size: 4rem;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--GrayishBlue);
+}
+
+.plan-section .basic .plan-price,
+.plan-section .master .plan-price {
+  color: var(--DarkGrayishBlue);
+}
+
+.plan-section .plan .dollar {
+  font-size: 2rem;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.plan-section .plan .plan-features .plan-item {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--GrayishBlue);
+}
+
+.plan-section .plan .btn {
+  display: block;
+  background: var(--primary);
+  padding: 15px;
+  margin-top: 30px;
+  color: white;
+  border-radius: 5px;
+}
+
+.plan-section .plan .btn:hover {
+  background: white;
+  color: hsl(237, 63%, 64%);
+  border: 1px solid var(--GrayishBlue);
+  font-weight: 900;
+}
+
+.plan-section .plan .btn-blue {
+  background: white;
+  color: hsl(237, 63%, 64%);
+}
+
+.plan-section .plan .btn-blue:hover {
+  background-color: var(--primary);
+  color: var(--VeryLightGrayishBlue);
+  border: 1px solid var(--VeryLightGrayishBlue);
+}
+
+.plan-section .basic {
+  background-color: white;
+  color: var(--GrayishBlue);
+}
+
+.plan-section .professional {
+  background: var(--primary);
+  color: var(--VeryLightGrayishBlue);
+  height: 400px;
+}
+
+.plan-section .master {
+  background-color: white;
+  color: var(--GrayishBlue);
+}
